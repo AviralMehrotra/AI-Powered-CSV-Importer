@@ -14,9 +14,11 @@ export default function ThemeToggle() {
     if (savedTheme === 'dark' || (!savedTheme && isSystemDark)) {
       setTheme('dark');
       document.documentElement.classList.add('dark');
+      document.documentElement.setAttribute('data-theme', 'dark');
     } else {
       setTheme('light');
       document.documentElement.classList.remove('dark');
+      document.documentElement.setAttribute('data-theme', 'light');
     }
   }, []);
 
@@ -25,10 +27,12 @@ export default function ThemeToggle() {
       setTheme('light');
       localStorage.setItem('theme', 'light');
       document.documentElement.classList.remove('dark');
+      document.documentElement.setAttribute('data-theme', 'light');
     } else {
       setTheme('dark');
       localStorage.setItem('theme', 'dark');
       document.documentElement.classList.add('dark');
+      document.documentElement.setAttribute('data-theme', 'dark');
     }
   };
 
