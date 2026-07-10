@@ -1,14 +1,8 @@
-First Name,Last Name,Email,Phone,Company,City,State,Notes,Source
-John,Doe,john.doe@example.com,+1 555-0100,Global Industries,Seattle,WA,Interested in premium plan,leads_on_demand
-Jane,Smith,jane.smith@example.com; janesmith_alt@example.com,+91 98765 43210 / +91 99999 88888,Initech,Mumbai,MH,"Wants follow-up next Monday, has alternate phone",meridian_tower
-Sarah,Connor,sconnor@cyberdyne.org,,Resistance Inc,Los Angeles,CA,Urgent contact requested,eden_park
-
-# Facebook Lead Export format
-created_time,full_name,email_address,phone_number_raw,company_name,remarks,source_name
-2026-07-10T12:00:00Z,Arthur Dent,adent@galaxy.co.uk,+44 7911 123456,Magrathea,Needs a towel and tea,eden_park
-2026-07-10T12:30:00Z,Ford Prefect,,,Prefect Travel,In space - skip this lead as it has no contact info,
-
-# Google Ads Format
-Conversion Time,User Name,Contact Email,Mobile Number,Business Name,City,State,Status,Campaign Source
-2026-07-10T13:00:00Z,Bruce Wayne,bwayne@waynecorp.com,+1 555-0109,Wayne Enterprises,Gotham,NJ,SALE_DONE,varah_swamy
-2026-07-10T13:15:00Z,Clark Kent,ckent@dailyplanet.com,+1 555-0110,Daily Planet,Metropolis,IL,GOOD_LEAD_FOLLOW_UP,sarjapur_plots
+First Name,Last Name,Email Address,Mobile Phone,Company Name,Location City,Lead Status,Campaign Source,Remarks
+John,Doe,john.doe@example.com,+1 555-0100,Global Industries,Seattle,GOOD_LEAD_FOLLOW_UP,leads_on_demand,Interested in premium plan
+Jane,Smith,jane.smith@example.com; janesmith_alt@example.com,+91 98765 43210 / +91 99999 88888,Initech,Mumbai,DID_NOT_CONNECT,meridian_tower,"Wants follow-up next Monday, has alternate phone"
+Sarah,Connor,sconnor@cyberdyne.org,,Resistance Inc,Los Angeles,BAD_LEAD,eden_park,Urgent contact requested
+Arthur,Dent,adent@galaxy.co.uk,+44 7911 123456,Magrathea,,GOOD_LEAD_FOLLOW_UP,eden_park,Needs a towel and tea
+Ford,Prefect,,,Prefect Travel,,GOOD_LEAD_FOLLOW_UP,,In space - skip this lead as it has no contact info
+Bruce,Wayne,bwayne@waynecorp.com,+1 555-0109,Wayne Enterprises,Gotham,SALE_DONE,varah_swamy,Needs a bat-signal
+Clark,Kent,ckent@dailyplanet.com,+1 555-0110,Daily Planet,Metropolis,GOOD_LEAD_FOLLOW_UP,sarjapur_plots,Reporter
