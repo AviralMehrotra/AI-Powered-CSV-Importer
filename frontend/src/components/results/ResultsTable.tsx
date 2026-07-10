@@ -203,7 +203,7 @@ export default function ResultsTable({ imported, skipped }: ResultsTableProps) {
               <p className="text-xs">No entries match the active criteria list filter.</p>
             </div>
           ) : (
-            <table className="w-full text-left border-collapse">
+            <table className="min-w-full text-left border-collapse min-w-[1100px]">
               <thead className="sticky top-0 bg-surface-secondary border-b border-brand-border z-10">
                 {table.getHeaderGroups().map((headerGroup) => (
                   <tr key={headerGroup.id}>

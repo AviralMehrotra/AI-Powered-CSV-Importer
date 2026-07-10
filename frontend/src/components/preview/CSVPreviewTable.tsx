@@ -102,7 +102,7 @@ export default function CSVPreviewTable({
       {/* Main Table Wrapper */}
       <div className="relative border border-brand-border rounded-xl bg-surface overflow-hidden shadow-sm">
         <div className="overflow-x-auto overflow-y-auto max-h-[420px] min-h-[200px]">
-          <table className="w-full text-left border-collapse">
+          <table className="min-w-full text-left border-collapse min-w-[1000px]">
             <thead className="sticky top-0 bg-surface-secondary border-b border-brand-border z-10">
               {table.getHeaderGroups().map((headerGroup) => (
                 <tr key={headerGroup.id}>
