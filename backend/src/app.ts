@@ -48,9 +48,12 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   });
 });
 
-// Start listening
-const server = app.listen(config.port, () => {
-  console.log(`Server running in ${config.nodeEnv} mode on port ${config.port}`);
-});
+// Start listening conditionally (only if not on Vercel)
+if (!process.env.VERCEL) {
+  app.listen(config.port, () => {
+    console.log(`Server running in ${config.nodeEnv} mode on port ${config.port}`);
+  });
+}
 
-export { app, server };
+export { app };
+export default app;
