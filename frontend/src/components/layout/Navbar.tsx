@@ -24,7 +24,7 @@ export default function Navbar() {
 
         <nav className="flex items-center space-x-4">
           <a
-            href="https://github.com"
+            href="https://github.com/AviralMehrotra/AI-Powered-CSV-Importer/blob/master/README.md"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors duration-200"
