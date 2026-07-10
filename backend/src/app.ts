@@ -1,6 +1,7 @@
 import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import { config } from './config/index.js';
+import importRouter from './routes/import.routes.js';
 
 const app = express();
 
@@ -23,10 +24,24 @@ app.get('/health', (req: Request, res: Response) => {
   });
 });
 
+// Import route
+app.use('/api/import', importRouter);
+
 // Error handling middleware
-app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-  console.error('Unhandled Server Error:', err);
-  res.status(500).json({
+app.use((err: any, req: Request, res: Response, next: NextFunction) => {
+  console.error('Unhandled Error:', err);
+  
+  // Handle Multer upload errors
+  if (err instanceof Error && (err.message.includes('file format') || err.message.includes('too large') || err.name === 'MulterError')) {
+    res.status(400).json({
+      error: {
+        message: err.message,
+      },
+    });
+    return;
+  }
+
+  res.status(err.status || 500).json({
     error: {
       message: config.nodeEnv === 'development' ? err.message : 'Internal server error',
     },
