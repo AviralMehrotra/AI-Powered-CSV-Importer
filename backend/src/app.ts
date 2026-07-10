@@ -15,8 +15,8 @@ app.use(
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
-// Health check endpoint
-app.get('/health', (req: Request, res: Response) => {
+// Health check endpoint (dual mount)
+app.get(['/health', '/api/health'], (req: Request, res: Response) => {
   res.status(200).json({
     status: 'ok',
     timestamp: new Date().toISOString(),
@@ -24,8 +24,8 @@ app.get('/health', (req: Request, res: Response) => {
   });
 });
 
-// Import route
-app.use('/api/import', importRouter);
+// Import route (dual mount)
+app.use(['/api/import', '/import'], importRouter);
 
 // Error handling middleware
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
