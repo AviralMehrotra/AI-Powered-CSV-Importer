@@ -10,6 +10,9 @@ export const config = {
   corsOrigin: process.env.CORS_ORIGIN || 'http://localhost:3000',
   geminiApiKey: process.env.GEMINI_API_KEY || '',
   geminiModel: process.env.GEMINI_MODEL || 'gemini-2.5-flash',
+  importBatchSize: parseInt(process.env.IMPORT_BATCH_SIZE || '50', 10),
+  importConcurrency: parseInt(process.env.IMPORT_CONCURRENCY || '2', 10),
+  importMaxRetries: parseInt(process.env.IMPORT_MAX_RETRIES || '3', 10),
 };
 
 // Simple sanity validation
